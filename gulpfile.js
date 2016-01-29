@@ -1,15 +1,10 @@
 var gulp = require('gulp');
-// Requires the gulp-sass plugin
 var sass = require('gulp-sass');
-
 var cache = require('gulp-cache');
 var browserSync = require('browser-sync');
-
 var useref = require('gulp-useref');
-// Other requires...
 var uglify = require('gulp-uglify');
 var gulpIf = require('gulp-if');
-
 var imagemin = require('gulp-imagemin');
 
 gulp.task('sass', function() {

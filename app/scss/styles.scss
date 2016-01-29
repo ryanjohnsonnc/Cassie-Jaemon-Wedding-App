@@ -1,6 +1,10 @@
 @import 'carousel';
 
-/*----------------------------------------------------------------- 
+$primary-blue: #01437f;
+$secondary-blue: #0286ff;
+$beige: #bca992;
+
+/*-----------------------------------------------------------------
 [Table of Contents]
 
 1. RESET
@@ -14,7 +18,7 @@
 	5-2. SLIDER
 	5-3. COUNTDOWN
 	5-4. ABOUT CONTENT
-	5-5. CAROUSEL 
+	5-5. CAROUSEL
 	5-6. HOME BOTTOM
 6. BLOG
 	6-1. LATEST POSTS
@@ -41,7 +45,7 @@
 
 /*===============================================*/
 /* 2. GENERAL		 						 */
-/*===============================================*/	
+/*===============================================*/
 html, body{
 	height: 100%;
 	width: 100%;
@@ -97,7 +101,7 @@ a.more{
 }
 /*---------------------------*/
 /* 2-1. HEADINGS             */
-/*---------------------------*/	
+/*---------------------------*/
 h1, h2, h3, h4, h5, h6{
 	font-weight:300;
 	letter-spacing:-0.5px;
@@ -107,7 +111,7 @@ h1, h2, h3, h4, h5, h6{
 }
 h1{
 	font-size:60px;
-	
+
 }
 h2{
 	font-size:26px;
@@ -130,7 +134,7 @@ h6{
 }
 /*---------------------------*/
 /* 2-2. GOOGLE FONTS     	 */
-/*---------------------------*/	
+/*---------------------------*/
 h1, h2, h3, h4, h5, h6, ul#main_menu li a, .title_front, .title_date, .title_under, span.countdown_amount, .rsvp_button{
 	font-family: 'Open Sans', sans-serif;
 }
@@ -141,7 +145,7 @@ h1, h2, h3, h4, h5, h6, ul#main_menu li a, .title_front, .title_date, .title_und
 
 /*===============================================*/
 /* 3. LAYOUT    		 						 */
-/*===============================================*/	
+/*===============================================*/
 #main_container{
 	margin:auto;
 	width:100%;
@@ -301,7 +305,7 @@ ul#main_menu ul li a:hover {
 /*===============================================*/
 /*---------------------------*/
 /* 5-1. HOME PAGE COUPLE NAMES 	 */
-/*---------------------------*/	
+/*---------------------------*/
 .title_container{
 	text-align:center;
 	position:absolute;
@@ -344,7 +348,7 @@ span.swirl_right{
 }
 /*---------------------------*/
 /* 5-2. SLIDER 	 */
-/*---------------------------*/	
+/*---------------------------*/
 .slider_container {
 	width: 100%;
 	height:85%;
@@ -446,7 +450,7 @@ span.swirl_right{
 }
 /*---------------------------*/
 /* 5-3. COUNTDOWN 	 */
-/*---------------------------*/	
+/*---------------------------*/
 .countdown_container{
 	width:100%;
 	height:auto;
@@ -733,7 +737,7 @@ span.subtitle{
 
 /*===============================================*/
 /* 6. BLOG	 						 */
-/*===============================================*/	
+/*===============================================*/
 
 /*---------------------------*/
 /* 6-1. LATEST POSTS 	 */
@@ -1014,7 +1018,7 @@ img.avatar{
 	height:auto;
 }
 .general_header{
-	background:url(../images/header.jpg) no-repeat center center;
+	background:url(../images/cassie-home_header.jpg) no-repeat top center;
 }
 .contact_header{
 	background:url(../images/header.jpg) no-repeat center center;
@@ -1253,7 +1257,7 @@ label#loader {
 /*===============================================*/
 .footer{
 	clear:both;
-	background-color:#2d2e21;
+	background-color: $primary-blue;
 	width:100%;
 	padding:40px 0 20px 0;
 }
@@ -1456,7 +1460,7 @@ span.swirl_right_transparent{
 @media screen and (max-width: 680px) {
 	.page_header_trans{
 	padding:100px 0 60px 0;
-	
+
 	}
 	.page_header_title p{
 	text-align:center;
@@ -1732,7 +1736,7 @@ span.swirl_right_transparent{
 	}
 	span.countdown_amount {
 	font-size:22px;
-	
+
 	}
 	.about_content{
 	padding:40px 0 0 0;
@@ -1823,7 +1827,7 @@ span.swirl_right_transparent{
 	}
 	.footer_menu li{
 	margin:0px 0 10px 0;
-	
+
 	}
 	.form_row, .form_row_full {
 	float:left;
@@ -1839,7 +1843,7 @@ span.swirl_right_transparent{
 	text-align:left;
 	padding:5px 0 10px 0
 	}
-	input.form_input{
+	button, btn, input.form_input{
 	width:100%;
 	height:39px;
 	float:left;
@@ -1925,16 +1929,16 @@ span.swirl_right_transparent{
 
 /*------- COLORING ------*/
 a, blockquote, span.love_quote, h1 span, h2 span, h3 span, h4 span, h5 span, h6 span, span.post_date, .latest_posts .left13:hover .post_info h3 a, .latest_posts .left13_last:hover .post_info h3 a, .checkbox_container label span, .footer_names{
-color:#01593e;
+color:$beige;
 }
 blockquote{
-border-left:3px #01593e solid;
+border-left:3px $beige solid;
 }
 a.post_read_more, a.view_all, .wp-pagenavi a, .wp-pagenavi span.current{
-border:1px #01593e solid;
+border:1px $beige solid;
 }
-.wp-pagenavi a:hover{ 
-background-color:#01593e;
+.wp-pagenavi a:hover{
+background-color:$beige;
 }
 
 .back, .about_topsign, span.names_titles, span.subtitle{
@@ -1944,7 +1948,7 @@ color:#01437f;
 border:1px solid #01437f;
 }
 .no-touch .back:hover, .countdown_container, a.thumb_read_more, .full_width_carousel .left14 h3, .full_width_carousel .left14_last h3, input.form_submit_contact, input[type="checkbox"] + label:before, input[type="checkbox"]:checked + label:before{
-background-color:#01437f; 
+background-color:#01437f;
 }
 
 
@@ -1962,3 +1966,43 @@ ul#main_menu li a.selected, ul#main_menu li a:hover, .footer_menu li{
 background:none;}
 }
 
+.countdown_container {background-color: $beige;}
+.title span, .title_under {color: $beige;}
+p.about {margin-top: 20px;}
+
+button {
+	background-color: #01437f;
+	color: #fff;
+border: none;
+cursor: pointer;
+border-radius: 5px;
+-webkit-border-radius: 5px;
+-khtml-border-radius: 5px;
+margin: 5px 5px 0 0;
+padding: 15px 75px;
+text-align: center;
+display: block;
+font-size: 16px;
+font-weight: bold;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+#main_menu {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+ul {
+	padding: 0 10px 20px 20px;
+  margin: 0px;
+  list-style: none;
+}
+
+ul li {
+	background: url(../images/bullet.gif) no-repeat left;
+    padding: 0 0 0 20px;
+    margin: 10px 0;
+}
+
+span.detail-head {font-weight: 700; color: $primary-blue;}
+
+.footer_socials {display: none;}

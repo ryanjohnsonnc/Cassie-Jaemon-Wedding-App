@@ -8,12 +8,12 @@ if($post) {
 
 		$regex = "^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$^";
 		$eregi = preg_replace($regex,'', trim($email));
-		
+
 		return empty($eregi) ? true : false;
 	}
-	
+
 	$name = stripslashes($_POST['contactname']);
-	$to = trim($_POST['to']);
+$to = "ryanjohnson1989@me.com";
 	$email = strtolower(trim($_POST['contactemail']));
 	$phone = stripslashes($_POST['contactphone']);
 	$message = stripslashes($_POST['contactcomments']);
@@ -21,14 +21,14 @@ if($post) {
 	$error = '';
 	$Reply=$to;
 	$from=$to;
-	
+
 	// Check Name Field
 	if(!$name) {
 		$error .= 'Please enter your name.<br />';
 	}
-	
+
 	// Checks Email Field
-	if(!$email) { 
+	if(!$email) {
 		$error .= 'Please enter an e-mail address.<br />';
 	}
 	if($email && !ValidateEmail($email)) {
@@ -39,23 +39,23 @@ if($post) {
 	if(!$phone) {
 		$error .= 'Please enter your phont.<br />';
 	}
-	
+
 	// Checks Message (length)
 	if(!$message || strlen($message) < 3) {
 		$error .= "Please enter your message. It should have at least 5 characters.<br />";
 	}
-	
+
 	// Let's send the email.
 	if(!$error) {
 		$messages="From: $email <br>";
 		$messages.="Name: $name <br>";
-		$messages.="Email: $email <br>";	
+		$messages.="Email: $email <br>";
 		$messages.="Phone: $phone <br>";
 		$messages.="Message: $message <br><br>";
 		$emailto=$to;
-		
-		$mail = mail($emailto,$subject,$messages,"from: $from <$Reply>\nReply-To: $Reply \nContent-type: text/html");	
-	
+
+		$mail = mail($emailto,$subject,$messages,"from: $from <$Reply>\nReply-To: $Reply \nContent-type: text/html");
+
 		if($mail) {
 			echo 'success';
 		}
