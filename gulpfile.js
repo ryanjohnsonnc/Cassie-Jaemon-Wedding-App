@@ -7,6 +7,7 @@ var uglify = require('gulp-uglify');
 var gulpIf = require('gulp-if');
 var imagemin = require('gulp-imagemin');
 
+
 gulp.task('sass', function() {
   return gulp.src('app/scss/styles.scss') // Gets all files ending with .scss in app/scss
     .pipe(sass())
@@ -39,12 +40,6 @@ gulp.task('useref', function(){
     .pipe(gulpIf('*.js', uglify()))
     .pipe(gulp.dest('dist'))
 });
-
-
-
-
-
-
 
 gulp.task('images', function(){
   return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
